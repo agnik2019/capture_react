@@ -2,54 +2,47 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import {About} from '../styles';
 import Toggle from "./Toggle";
+import {AnimateSharedLayout} from "framer-motion"
 
 export default function FaqSection() {
     const [faqToggle, setFaqToggle] = useState(false);
     return (
         <Faq>
             <h2>Any Questions <span>FAQ</span></h2>
-        <Toggle>
-            <div  className="questions">
-                <h4>How do I Start?</h4>
+            <AnimateSharedLayout>
+        <Toggle title="How do I Start?">
+
                 <div className="answer">
-                    <div className="faq-line"></div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                   
-                  
+                    <p>Lorem ipsum dolor sit amet.</p>                 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, porro.</p>
                   
-                </div>
             </div>
             </Toggle>
              
-            <div className="questions">
-                <h4>Daily schedule</h4>
+            <Toggle title="Daily schedule">
                 <div className="answer">
-                <div className="faq-line"></div>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, porro.</p>
-                </div>
             </div>
+            </Toggle>
         
-            <div className="questions">
-                <h4>Different Payment Methods</h4>
+
+        <Toggle title="Different Payment Methods">
                 <div className="answer">
-                <div className="faq-line"></div>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, porro.</p>
                 </div>
-            </div>
+        </Toggle>
        
 
-         
-            <div className="questions">
-                <h4>What products do you offer</h4>
+         <Toggle title="What products do you offer">
                 <div className="answer">
-                <div className="faq-line"></div>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, porro.</p>
                 </div>
-            </div>
+         </Toggle>
+         </AnimateSharedLayout>
+
   
         </Faq>
     )
