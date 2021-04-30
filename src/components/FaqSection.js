@@ -1,20 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import {About} from '../styles';
+import Toggle from "./Toggle";
 
 export default function FaqSection() {
+    const [faqToggle, setFaqToggle] = useState(false);
     return (
         <Faq>
             <h2>Any Questions <span>FAQ</span></h2>
-            <div className="questions">
+        <Toggle>
+            <div  className="questions">
                 <h4>How do I Start?</h4>
                 <div className="answer">
                     <div className="faq-line"></div>
                     <p>Lorem ipsum dolor sit amet.</p>
+                   
+                  
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, porro.</p>
+                  
                 </div>
             </div>
-
+            </Toggle>
+             
             <div className="questions">
                 <h4>Daily schedule</h4>
                 <div className="answer">
@@ -23,7 +30,7 @@ export default function FaqSection() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, porro.</p>
                 </div>
             </div>
-
+        
             <div className="questions">
                 <h4>Different Payment Methods</h4>
                 <div className="answer">
@@ -32,7 +39,9 @@ export default function FaqSection() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, porro.</p>
                 </div>
             </div>
+       
 
+         
             <div className="questions">
                 <h4>What products do you offer</h4>
                 <div className="answer">
@@ -41,6 +50,7 @@ export default function FaqSection() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, porro.</p>
                 </div>
             </div>
+  
         </Faq>
     )
 }
